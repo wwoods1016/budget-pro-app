@@ -10,14 +10,14 @@ module.exports = app => {
 		res.sendFile(path.join(__dirname, '../public/dashboard.html'));
 	});
 
-	// household route loads household.html
-	app.get('/household', (req, res) => {
-		res.sendFile(path.join(__dirname, '../public/household.html'));
+	// expenses route loads expenses.html
+	app.get('/expenses', (req, res) => {
+		res.sendFile(path.join(__dirname, '../public/expenses.html'));
 	});
 
-	// budget route loads budget.html
-	app.get('/budget', (req, res) => {
-		res.sendFile(path.join(__dirname, '../public/budget.html'));
+	// income route loads income.html
+	app.get('/income', (req, res) => {
+		res.sendFile(path.join(__dirname, '../public/income.html'));
 	});
 
 	// about route loads about-us.html

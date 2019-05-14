@@ -17,8 +17,8 @@ app.use(express.static('public'));
 
 // Routes
 require('./routes/html-routes.js')(app);
-require('./routes/household-api-routes.js')(app);
-require('./routes/budget-api-routes.js')(app);
+require('./routes/expenses-api-routes.js')(app);
+require('./routes/income-api-routes.js')(app);
 
 // Syncing our sequelize models and then starting our Express app
 db.sequelize.sync({ force: true }).then(() => {
