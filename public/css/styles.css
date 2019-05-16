@@ -109,6 +109,7 @@ body {
 
 .demo-layout .demo-navigation .mdl-navigation__link:hover {
 	background-color: var(--blue);
+	transition: 0.2s;
 }
 
 .demo-navigation .mdl-navigation__link .material-icons {
