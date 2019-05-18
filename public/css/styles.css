@@ -261,3 +261,31 @@ _:-ms-input-placeholder,
 	height: 100%;
 	width: 100%;
 }
+
+/* Welcome Page */
+
+#welcome-header {
+	display: none;
+}
+
+#welcome-main {
+	background-color: #37474F;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+#welcome-title {
+	color: white;
+	margin: 0 20px;
+}
+
+#welcome-subtitle {
+	color: white;
+	margin: 0 20px;
+}
+
+.demo-drawer-title {
+	box-shadow: none;
+}
