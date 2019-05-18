@@ -15,22 +15,25 @@ module.exports = (sequelize, DataTypes) => {
 			type: DataTypes.DATE
 		},
 
-		category: {
+		IEtype: {
 			type: DataTypes.ENUM,
-			values: [""],
+			values: ["Income", "Expense"],
 
 		},
-		IEType: {
+		category: {
 			type: DataTypes.ENUM,
 			values: ["Bills", "Utilities", "Savings", "CC Payment","Other", "Wellness", "Food", "Personal Care","Travel"],
-
+        },
 			descript: {
-				type: DataTypes.VATCHAR,
-				allowNULL: false
+				type: DataTypes.VARCHAR,
+                allowNULL: false,
+                validate: {
+                    'len': [1,255]
+                }
 
 			},
 			source: {
-				type: DataTypes.VATCHAR,
+				type: DataTypes.VARCHAR,
 				allowNULL: false
 
 			},
