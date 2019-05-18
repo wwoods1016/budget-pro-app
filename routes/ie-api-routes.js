@@ -5,23 +5,11 @@ const db = require('../models');
 
 // Routes
 module.exports = app => {
-  //Get route for getting all of the Expenses
+  //Get route for all incomes and expenses
   app.get("/api/incm_exp/IEtype/:IEtype", function (req, res) {
     db.incm_exp.findAll({
       where: {
-        IEtype: req.params.IEtype
-      }
-    })
-      .then(function (dbincm_exp) {
-        res.json(dbincm_exp);
-      });
-  });
-
-  //Get route for all incomes
-  app.get("/api/incm_exp/IEtype/:IEtype", function (req, res) {
-    db.incm_exp.findAll({
-      where: {
-        IEtype: req.params.IEtype
+        IEtype: req.params.IEtype.values
       }
     })
       .then(function (dbincm_exp) {
