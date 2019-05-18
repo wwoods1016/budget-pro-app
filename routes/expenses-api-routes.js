@@ -25,7 +25,7 @@ module.exports = app => {
       });
   });
 
-  // Get rotue for retrieving a single Expense
+  // Get route for retrieving a single Expense
   app.get("/api/Expenses/:id", function (req, res) {
     db.Expenses.findOne({
       where: {
@@ -74,4 +74,4 @@ module.exports = app => {
         res.json(dbExpenses);
       });
   });
-}
+};
