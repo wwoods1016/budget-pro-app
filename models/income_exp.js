@@ -1,16 +1,16 @@
 module.exports = (sequelize, DataTypes) => {
-	const Income = sequelize.define('Income', {
+	const incm_exp = sequelize.define('incm_exp', {
 
 		ieID: {
 			type: DataTypes.INTEGER,
 			allowNULL: false
 
 		},
-		incomeAmount: {
-			type: DataTypes.FLOAT,
-			allowNULL: false
+        amount:{
+          type:DataTypes.FLOAT,
+           allowNULL:false 
+        },
 
-		},
 		IEdate: {
 			type: DataTypes.DATE
 		},
@@ -22,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
 		},
 		IEType: {
 			type: DataTypes.ENUM,
-			values: ["Bills", "Utilities", "Savings", "CC Payment"],
+			values: ["Bills", "Utilities", "Savings", "CC Payment","Other", "Wellness", "Food", "Personal Care","Travel"],
 
 			descript: {
 				type: DataTypes.VATCHAR,
@@ -38,7 +38,7 @@ module.exports = (sequelize, DataTypes) => {
 		}
 
 	
-	})
-
+	});
+return incm_exp;
 	
 };
