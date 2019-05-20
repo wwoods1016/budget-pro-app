@@ -1,23 +1,28 @@
 {
   "development": {
     "username": "root",
-    "password": "root",
-    "database": "test_db",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "password": "theroots",
+    "database": "budgetPro_db",
+    "host": "localhost",
+    "dialect": "mysql",
+    "port": 3306
   },
   "test": {
-    "username": "root",
-    "password": "root",
-    "database": "test_db",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "user": "root",
+    "password": "theroots",
+    "database": "budgetPro_db",
+    "host": "localhost",
+    "dialect": "mysql",
+    "port": 3306
+
   },
   "production": {
     "username": "root",
-    "password": "root",
-    "database": "test_db",
+    "password": "theroots",
+    "database": "budgetPro_db",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "port": 3306
+
   }
 }
