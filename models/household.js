@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
 
         },
         hhName: {
-            type:DataTypes.VARCHAR,
+            type:DataTypes.STRING,
             allowNull:false,
             validate: {
                 'len': [1,255]
@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
 
         },
         relIeId:{
-            type:DataTypes.Integer,
+            type:DataTypes.INTEGER,
         }
     })
     return  household;

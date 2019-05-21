@@ -6,21 +6,21 @@ module.exports = (sequelize, DataTypes) => {
 
         },
         hhMemFirstName:{
-            type:DataTypes.VARCHAR,
+            type: DataTypes.STRING,
             allowNULL:false,
             validate: {
                 'len': [1,255]
             }
         },
         hhMemLastName:{
-            type:DataTypes.VARCHAR,
+            type: DataTypes.STRING,
             allowNULL:false,
             validate: {
                 'len': [1,255]
             }
         },
         relHHId:{
-           type:DataTypes.INTEGER,
+           type: DataTypes.INTEGER,
            allowNULL:false
         }
     })

@@ -25,7 +25,7 @@ module.exports = (sequelize, DataTypes) => {
 			values: ["Bills", "Utilities", "Savings", "CC Payment","Other", "Wellness", "Food", "Personal Care","Travel"],
         },
 			descript: {
-				type: DataTypes.VARCHAR,
+				type: DataTypes.STRING,
                 allowNULL: false,
                 validate: {
                     'len': [1,255]
@@ -33,15 +33,15 @@ module.exports = (sequelize, DataTypes) => {
 
 			},
 			source: {
-				type: DataTypes.VARCHAR,
+				type: DataTypes.STRING,
 				allowNULL: false
 
 			},
 
-		}
+		
 
 	
-	});
+		})
 return incm_exp;
 	
 };

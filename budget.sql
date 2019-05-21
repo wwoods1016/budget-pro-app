@@ -3,14 +3,17 @@ DROP DATABASE budgetPro_db;
 CREATE DATABASE budgetPro_db;
 USE budgetPro_db;
 
-CREATE TABLE incm_exp_db(
+
+
+CREATE TABLE incm_exp(
    ieID int NOT NULL AUTO_INCREMENT,
    PRIMARY KEY (ieID),
    descript VARCHAR(100) NOT NULL,
-   IEtype ENUM("Income", "Expense"),
+   IEtype ENUM("Income", "Expense") NOT NULL,
    IEdate DATE,
    amount FLOAT(8,2),
-   category ENUM("Bills","Utilities", "Savings", "CC Payment"),
+   -- add default of 'Other' to the catagory column
+   category ENUM("Bills","Utilities", "Savings", "CC Payment", "Other", "Wellness", "Food", "Personal Care","Travel") ,
    source VARCHAR(80)
 );
 
