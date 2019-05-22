@@ -23,6 +23,14 @@ module.exports = function(sequelize, DataTypes) {
     gDate: {
         type: DataTypes.DATE,
         allowNull: false,
+      },
+    // this is the related household member id so that we can matchup all entries with a specific household member
+      relHhMemID: {
+          type: DataTypes.INTEGER,
+          allowNull: false,
+          validate: {
+              len: [1]
+          }
       }
     });
 
