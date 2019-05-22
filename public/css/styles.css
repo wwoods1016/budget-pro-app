@@ -195,7 +195,7 @@ _:-ms-input-placeholder,
 }
 .demo-updates .mdl-card__title {
 	min-height: 200px;
-	background-image: url('../img/business.png');
+	background-image: url('../img/check.jpg');
 	background-position: 90% 100%;
 	background-repeat: no-repeat;
 }
@@ -238,10 +238,7 @@ _:-ms-input-placeholder,
 	margin-top: 10px;
 	padding-left: 0;
 }
-/* Learn more card */
-.mdl-card__title-text {
-	text-shadow: 2px 2px 4px #ffffff;
-}
+
 /* Budget text color */
 .mdl-checkbox {
 	color: #ffffff;
@@ -255,6 +252,12 @@ _:-ms-input-placeholder,
 	background-color: white;
 }
 
+/* Logo */
+#logo {
+	position: absolute;
+	top: -10px;
+}
+
 /* About page */
 
 .about-main {
@@ -264,8 +267,10 @@ _:-ms-input-placeholder,
 
 /* Welcome Page */
 
-#welcome-header {
+@media only screen and (min-width: 1024px) {
+	#welcome-header {
 	display: none;
+}
 }
 
 #welcome-main {
@@ -274,16 +279,55 @@ _:-ms-input-placeholder,
 	justify-content: center;
 	align-items: center;
 	text-align: center;
+	border-left: 15px solid #37474F;
+	border-right: 15px solid #37474F;
 }
 
 #welcome-title {
+	position: absolute;
 	color: white;
-	margin: 0 20px;
+	top: 20%;
+	max-width: 80%;
+	font-family: 'Raleway', sans-serif;
+-webkit-animation: .5s ease 0s normal forwards 1 fadein;
+    animation: .5s ease 0s normal forwards 1 fadein;
+}
+
+@keyframes fadein{
+    0% { opacity:0; }
+    66% { opacity:0; }
+    100% { opacity:1; }
+}
+
+@-webkit-keyframes fadein{
+    0% { opacity:0; }
+    66% { opacity:0; }
+    100% { opacity:1; }
 }
 
 #welcome-subtitle {
+	position: absolute;
 	color: white;
-	margin: 0 20px;
+	font-size: 2em;
+	bottom: 20%;
+	font-family: 'Raleway', sans-serif;
+	max-width: 80%;
+	-webkit-animation: 3s ease 0s normal forwards 1 fadein;
+    animation: 3s ease 0s normal forwards 1 fadein;
+}
+
+@keyframes fadein{
+    0% { opacity:0; }
+    66% { opacity:0; }
+    100% { opacity:1; }
+}
+
+@-webkit-keyframes fadein{
+    0% { opacity:0; }
+    66% { opacity:0; }
+    100% { opacity:1; }
+}
+
 }
 
 .demo-drawer-title {
