@@ -196,8 +196,17 @@ _:-ms-input-placeholder,
 .demo-updates .mdl-card__title {
 	min-height: 200px;
 	background-image: url('../img/check.jpg');
-	background-position: 90% 100%;
-	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+.second-photo-one .second-photo-two {
+	min-height: 200px;
+	background-image: url('../img/money.jpg');
+	background-size: 100% 100%;
+}
+.third-photo-one .third-photo-two {
+	min-height: 200px;
+	background-image: url('../img/upgrade.jpg');
+	background-size: 100% 100%;
 }
 .demo-cards .mdl-card__actions a {
 	color: #33988f;
@@ -332,4 +341,9 @@ _:-ms-input-placeholder,
 
 .demo-drawer-title {
 	box-shadow: none;
+}
+
+.section-intro-text {
+	padding: 10px;
+	color: #888888;
 }
