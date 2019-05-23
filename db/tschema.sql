@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 DROP DATABASE budgetPro_db;
 
 CREATE DATABASE budgetPro_db;
@@ -39,5 +38,3 @@ CREATE TABLE goals(
     gAmount FLOAT (8.2),
     gDate DATE
 );
-=======
-
