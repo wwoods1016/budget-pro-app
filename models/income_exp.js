@@ -1,47 +1,36 @@
 module.exports = (sequelize, DataTypes) => {
 	const incm_exp = sequelize.define('incm_exp', {
-
-		ieID: {
-			type: DataTypes.INTEGER,
+		amount: {
+			type: DataTypes.FLOAT,
 			allowNULL: false
-
 		},
-        amount:{
-          type:DataTypes.FLOAT,
-           allowNULL:false 
-        },
-
 		IEdate: {
-			type: DataTypes.DATE
-		},
-
-		IEtype: {
-			type: DataTypes.ENUM,
-			values: ["Income", "Expense"],
-
+			type: DataTypes.STRING,
+			allowNULL: false,
+			validate: {
+				'len': [1, 255]
+			}
 		},
 		category: {
-			type: DataTypes.ENUM,
-			values: ["Bills", "Utilities", "Savings", "CC Payment","Other", "Wellness", "Food", "Personal Care","Travel"],
-        },
-			descript: {
-				type: DataTypes.STRING,
-                allowNULL: false,
-                validate: {
-                    'len': [1,255]
-                }
+			type: DataTypes.STRING,
+			allowNULL: false,
+			validate: {
+				'len': [1, 255]
+			}
+		},
+		descript: {
+			type: DataTypes.TEXT,
+			allowNULL: false,
+			validate: {
+				'len': [1, 255]
+			}
 
-			},
-			source: {
-				type: DataTypes.STRING,
-				allowNULL: false
+		},
+		source: {
+			type: DataTypes.STRING,
+			allowNULL: false
+		}
+	},{freezeTableName: true})
+	return incm_exp;
 
-			},
-
-		
-
-	
-		})
-return incm_exp;
-	
 };
