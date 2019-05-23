@@ -43,15 +43,19 @@ module.exports = app => {
 
   //Post route for income and expenses
   app.post("/api/incm_exp", function (req, res) {
-    console.log(req.body);
     db.incm_exp.create({
-      amount: req.body.amount,
-      IEdate: req.body.IEdate,
-      IEtype: req.body.IEtype,
-      category: req.body.category
+      amount: req.body.Amount,
+      IEdate: req.body.Date,
+      category: req.body.Category,
+      descript: req.body.Description,
+      source: req.body.Source
+ 
     })
       .then(function (dbincm_exp) {
         res.json(dbincm_exp);
+      })
+      .catch((err) => {
+        console.log(err);
       });
   });
-};
+ };
