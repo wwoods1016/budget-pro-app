@@ -1,13 +1,13 @@
 module.exports = (sequelize, DataTypes) => {
-	const Expenses = sequelize.define('Expenses', {});
+	const oldExpenses = sequelize.define('oldExpenses', {});
 
-	Expenses.associate = models => {
+	oldExpenses.associate = models => {
 		// Associating Expenses with Income
 		// When an Expense is deleted, also delete any associated Household Incomes
-		Expenses.hasMany(models.Income, {});
+		oldExpenses.hasMany(models.Income, {});
 	};
 
-	return Expenses;
+	return oldExpenses;
 };
 
 

@@ -44,8 +44,8 @@ module.exports = function(app) {
       });
   });
 
-  // incm_exp route for saving a new incm_exp
-  app.incm_exp("/api/incm_exp", function(req, res) {
+  // post route for saving a new incm_exp
+  app.post("/api/incm_exp", function(req, res) {
     console.log(req.body);
     db.incm_exp.create({
         descript: req.body.descript,
