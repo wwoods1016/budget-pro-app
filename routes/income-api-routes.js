@@ -39,7 +39,7 @@ module.exports = app => {
       });
   });
 
-  //Post route for income and expenses
+  //Post route for income and expenses comment
   app.post("/api/incm_exp", function (req, res) {
     console.log('stuff', req.body);
     db.incm_exp.create({
