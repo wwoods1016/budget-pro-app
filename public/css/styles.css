@@ -344,6 +344,13 @@ _:-ms-input-placeholder,
 }
 
 .section-intro-text {
-	padding: 10px;
+	padding: 20px 20px 10px 20px;
 	color: #888888;
+}
+
+form {
+	display: block;
+	text-align: center;
+	width: 100%;
+	padding: 20px;
 }
