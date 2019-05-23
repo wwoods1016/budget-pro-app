@@ -5,11 +5,11 @@ $(document).ready(() => {
         var income;
 
         var newIncome = {
-            source: $("#income-source").val().trim(),
-            category: $("#income-category").val().trim(),
-            amount: $("#income-amount").val().trim(),
-            date: $("#income-date").val().trim(),
-            description: $("income-description").val.trim()
+            Source: $("#income-source").val().trim(),
+            Category: $("#income-category").val().trim(),
+            Amount: $("#income-amount").val().trim(),
+            Date: $("#income-date").val().trim(),
+            Description: $("#income-description").val().trim(),
         };
         console.log(newIncome);
 
