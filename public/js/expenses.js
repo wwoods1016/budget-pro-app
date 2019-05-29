@@ -13,6 +13,7 @@ $("#expenses-form").on("submit", function (event) {
     Amount: $("#expenses-amount").val().trim(),
     Date: $("#expenses-date").val().trim(),
     Description: $("#expenses-description").val().trim(),
+    IEType:$("#IEType").val().trim()
   };
 
 
@@ -34,23 +35,28 @@ $("#expenses-form").on("submit", function (event) {
       var th2 = $('<th></th>').addClass('bar').text("ExpensesCategory");
       var th3 = $('<th></th>').addClass('bar').text("ExpensesAmount");
       var th4 = $('<th></th>').addClass('bar').text("ExpensesDescription");
+      var th5= $('<th></th>').addClass('bar').text("IETYPE");
       console.log(th1)
       table.append(row);
       row.append(th1);
       row.append(th2);
       row.append(th3);
       row.append(th4);
+      row.append(th5)
 
       var row1 = $('<tr></tr>');
       var td1 = $('<td></td>').addClass('bar').text(newExpenses.Source);
       var td2 = $('<td></td>').addClass('bar').text(newExpenses.Category);
       var td3 = $('<td></td>').addClass('bar').text(newExpenses.Amount);
       var td4 = $('<td></td>').addClass('bar').text(newExpenses.Description);
+      var td5 = $('<td></td>').addClass('bar').text(newExpenses.IEType);
+
       table.append(row1);
       row1.append(td1);
       row1.append(td2);
       row1.append(td3);
       row1.append(td4);
+      row1.append(td5)
       var deleteBtn = $("<button>");
       deleteBtn.text("x");
       deleteBtn.addClass("deleteBtn");
@@ -95,6 +101,7 @@ $("#expenses-form").on("submit", function (event) {
       $("#exp-well-" + i).append("<h6>Category: " + data[i].category + "</h6>");
       $("#exp-well-" + i).append("<h6>Description: " + data[i].descript + "</h6>");
       $("#exp-well-" + i).append("<h6>Source: " + data[i].source + "</h6>");
+      $("#exp-well-" + i).append("<h6>Source: " + data[i].IEType + "</h6>");
     }
   });
     Source: $("#expenses-source").val("");
