@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
 			allowNULL: false
 		},
 		IEdate: {
-			type: DataTypes.STRING,
+			type: DataTypes.DATE,
 			allowNULL: false,
 			validate: {
 				'len': [1, 255]

@@ -19,9 +19,6 @@ $("#expenses-form").on("submit", function (event) {
   // console.log(newExpenses);
 
 
-  
-
-
   $.post("/api/incm_exp", newExpenses)
     // On success, run the following code
     .then(function (data) {
