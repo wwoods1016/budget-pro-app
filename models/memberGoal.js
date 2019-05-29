@@ -1,36 +1,43 @@
 module.exports = (sequelize, DataTypes) => {
-	const incm_exp = sequelize.define('goals', {
-		amount: {
-			type: DataTypes.FLOAT,
-			allowNULL: false
-		},
-		IEdate: {
+	const goals = sequelize.define('goals', {
+		goalId: {
+			type: DataTypes.UUID,
+			allowNULL:false,
+			primaryKey: true,
+            unique: true,
+            autoIncrement: true
+		},	
+		gDate: {
 			type: DataTypes.STRING,
 			allowNULL: false,
 			validate: {
 				'len': [1, 255]
 			}
 		},
-		category: {
+		gName: {
 			type: DataTypes.STRING,
 			allowNULL: false,
 			validate: {
 				'len': [1, 255]
 			}
 		},
-		descript: {
+		gDesc: {
 			type: DataTypes.TEXT,
 			allowNULL: false,
 			validate: {
 				'len': [1, 255]
 			}
-
 		},
-		source: {
-			type: DataTypes.STRING,
+		gAmount: {
+			type: DataTypes.FLOAT,
 			allowNULL: false
-		}
+        },
+        gHHMemId: {
+			type: DataTypes.UUID,
+			allowNULL:false,
+            autoIncrement: false
+		}	
 	},{freezeTableName: true})
-	return incm_exp;
+	return goals;
 
 };

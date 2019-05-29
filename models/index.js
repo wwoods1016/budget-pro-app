@@ -34,4 +34,12 @@ Object.keys(db).forEach(modelName => {
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
+//  Joins or DB Table Relationships
+
+db.goals.belongsTo(db.hhMember);
+db.incm_exp.belongsTo(db.hhMember);
+db.hhMember.hasMany(db.goals);
+db.hhMember.hasMany(db.incm_exp);
+
+
 module.exports = db;
