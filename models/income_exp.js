@@ -14,6 +14,9 @@ module.exports = (sequelize, DataTypes) => {
 				'len': [1, 255]
 			}
 		},
+		IEType:{
+			type:DataTypes.STRING,
+		},
 		category: {
 			type: DataTypes.STRING,
 			allowNULL: false,
