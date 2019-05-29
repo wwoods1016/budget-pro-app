@@ -1,3 +1,6 @@
+
+
+
 module.exports = (sequelize, DataTypes) => {
 	const incm_exp = sequelize.define('incm_exp', {
 		amount: {
@@ -30,7 +33,7 @@ module.exports = (sequelize, DataTypes) => {
 			type: DataTypes.STRING,
 			allowNULL: false
 		}
-	},{freezeTableName: true})
+	}, { freezeTableName: true })
 	return incm_exp;
 
 };

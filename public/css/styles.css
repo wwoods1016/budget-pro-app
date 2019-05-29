@@ -354,3 +354,14 @@ form {
 	width: 100%;
 	padding: 20px;
 }
+#exp-section{
+	border: solid 1px gray;
+}
+#allexp{
+	border:solid 1px gray;
+}
+.deleteBtn{
+	size: 200px;
+	background-color: orange;
+
+}
