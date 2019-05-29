@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-	const incm_exp = sequelize.define('incm_exp', {
+	const incm_exp = sequelize.define('goals', {
 		amount: {
 			type: DataTypes.FLOAT,
 			allowNULL: false

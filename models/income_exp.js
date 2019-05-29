@@ -1,5 +1,12 @@
 module.exports = (sequelize, DataTypes) => {
 	const incm_exp = sequelize.define('incm_exp', {
+		id: {
+			type: DataTypes.UUID,
+			allowNULL:false,
+			primaryKey: true,
+            unique: true,
+            autoIncrement: true
+		},	
 		amount: {
 			type: DataTypes.FLOAT,
 			allowNULL: false
@@ -30,7 +37,9 @@ module.exports = (sequelize, DataTypes) => {
 			type: DataTypes.STRING,
 			allowNULL: false
 		}
-	},{freezeTableName: true})
+		
+	},
+	{freezeTableName: true})
 	return incm_exp;
 
 };
