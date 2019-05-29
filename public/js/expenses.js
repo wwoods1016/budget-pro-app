@@ -9,6 +9,7 @@ $("#expenses-form").on("submit", function (event) {
   var expenses;
 
   var newExpenses = {
+    IEtype: "Expense",
     Source: $("#expenses-source").val().trim(),
     Category: $("#expenses-category").val().trim(),
     Amount: $("#expenses-amount").val().trim(),

@@ -5,6 +5,7 @@ $(document).ready(() => {
         var income;
 
         var newIncome = {
+            IEtype: "Income",
             Source: $("#income-source").val().trim(),
             Category: $("#income-category").val().trim(),
             Amount: $("#income-amount").val().trim(),

@@ -44,6 +44,7 @@ module.exports = app => {
   //Post route for income and expenses
   app.post("/api/incm_exp", function (req, res) {
     db.incm_exp.create({
+      IEtype: req.body.IEtype,
       amount: req.body.Amount,
       IEdate: req.body.Date,
       category: req.body.Category,
