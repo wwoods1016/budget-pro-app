@@ -15,6 +15,17 @@ module.exports = app => {
       });
   });
 
+  app.get("/api/incm_exp/:IEType", function (req, res) {
+    //console.log(res)
+    db.incm_exp.findAll({
+      where: {
+        IEType: req.body.IEType
+      }
+          })
+      .then(function (dbincm_exp) {
+        res.json(dbincm_exp);
+      });
+  });
   
   //Put route for updating income or expenses
   app.put("/api/incm_exp", function (req, res) {
@@ -48,16 +59,11 @@ module.exports = app => {
       IEdate: req.body.Date,
       category: req.body.Category,
       descript: req.body.Description,
-      source: req.body.Source
+      source: req.body.Source,
+      IEType:req.body.IEType
       
-      
-      
-      
-      /*amount: req.body.amount,
-      IEdate: req.body.IEdate,
-      category: req.body.category,
-      descript: req.body.descript,
-      source: req.body.source*/
+          
+           
  
     })
       .then(function (dbincm_exp) {
