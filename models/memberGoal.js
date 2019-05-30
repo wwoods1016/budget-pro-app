@@ -1,7 +1,7 @@
 module.exports = (sequelize, DataTypes) => {
 	const goals = sequelize.define('goals', {
 		goalId: {
-			type: DataTypes.UUID,
+			type: DataTypes.FLOAT,
 			allowNULL:false,
 			primaryKey: true,
             unique: true,
@@ -33,7 +33,7 @@ module.exports = (sequelize, DataTypes) => {
 			allowNULL: false
         },
         gHHMemId: {
-			type: DataTypes.UUID,
+			type: DataTypes.FLOAT,
 			allowNULL:false,
             autoIncrement: false
 		}	
