@@ -6,11 +6,10 @@ const db = require('../models');
 // Routes
 module.exports = app => {
   //Get route for all incomes/expenses
-  app.get("/api/incm_exp/:IEtype", function (req, res) {
-    console.log(req.body)
+  app.get("/api/incm_exp/IEtype/:IEtype", function (req, res) {
     db.incm_exp.findAll({
       where: {
-        IEtype: req.params.IEtype
+        IEType: req.params.IEType
       }
           })
       .then(function (dbincm_exp) {
@@ -49,7 +48,7 @@ module.exports = app => {
   //Post route for income and expenses comment
   app.post("/api/incm_exp", function (req, res) {
     db.incm_exp.create({
-      IEtype: req.body.IEtype,
+      IEType: req.body.IEType,
       amount: req.body.Amount,
       IEdate: req.body.Date,
       category: req.body.Category,
