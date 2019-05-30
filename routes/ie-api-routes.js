@@ -5,23 +5,28 @@ const db = require('../models');
 
 // Routes
 module.exports = app => {
-  //Get route for all incomes and expenses
-  app.get("/api/incm_exp/IEtype/:IEtype", function (req, res) {
+  //Get route for all incomes/expenses
+  app.get("/api/incm_exp/:IEtype", function (req, res) {
+    console.log(req.body)
     db.incm_exp.findAll({
       where: {
-        IEtype: req.params.IEtype.values
+        IEtype: req.params.IEtype
       }
-    })
+          })
       .then(function (dbincm_exp) {
         res.json(dbincm_exp);
+      }).catch((err) => {
+        // console.log(err);
       });
   });
+
+  
   //Put route for updating income or expenses
   app.put("/api/incm_exp", function (req, res) {
     db.incm_exp.update(req.body,
       {
         where: {
-          ieID: req.body.ieID
+          ID: req.body.id
         }
       })
       .then(function (dbincm_exp) {
@@ -41,7 +46,7 @@ module.exports = app => {
       });
   });
 
-  //Post route for income and expenses
+  //Post route for income and expenses comment
   app.post("/api/incm_exp", function (req, res) {
     db.incm_exp.create({
       IEtype: req.body.IEtype,
@@ -50,7 +55,7 @@ module.exports = app => {
       category: req.body.Category,
       descript: req.body.Description,
       source: req.body.Source
- 
+    
     })
       .then(function (dbincm_exp) {
         res.json(dbincm_exp);
