@@ -15,6 +15,16 @@ module.exports = app => {
       });
   });
 
+//  //Get route for just expenses
+//  app.get("/api/expense", function (req, res) {
+//   //console.log(res)
+//   db.incm_exp.findAll({
+//         })
+//     .then(function (dbincm_exp) {
+//       res.json(dbincm_exp);
+//     });
+// });
+
   
   //Put route for updating income or expenses
   app.put("/api/incm_exp", function (req, res) {
