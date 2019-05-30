@@ -6,16 +6,16 @@ const db = require('../models');
 // Routes
 module.exports = app => {
   //Get route for all incomes and expenses
-  app.get("/api/incm_exp/IEtype/:IEtype", function (req, res) {
+  app.get("/api/incm_exp", function (req, res) {
+    //console.log(res)
     db.incm_exp.findAll({
-      where: {
-        IEtype: req.params.IEtype.values
-      }
-    })
+          })
       .then(function (dbincm_exp) {
         res.json(dbincm_exp);
       });
   });
+
+  
   //Put route for updating income or expenses
   app.put("/api/incm_exp", function (req, res) {
     db.incm_exp.update(req.body,
@@ -41,14 +41,24 @@ module.exports = app => {
       });
   });
 
-  //Post route for income and expenses
+  //Post route for income and expenses comment
   app.post("/api/incm_exp", function (req, res) {
     db.incm_exp.create({
       amount: req.body.Amount,
       IEdate: req.body.Date,
       category: req.body.Category,
       descript: req.body.Description,
-      source: req.body.Source
+      source: req.body.Source,
+      type: req.body.Type
+      
+      
+      
+      
+      /*amount: req.body.amount,
+      IEdate: req.body.IEdate,
+      category: req.body.category,
+      descript: req.body.descript,
+      source: req.body.source*/
  
     })
       .then(function (dbincm_exp) {
