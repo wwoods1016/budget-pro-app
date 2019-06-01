@@ -1,3 +1,5 @@
-CREATE DATABASE test_db;
+DROP DATABASE IF EXISTS budgetPro_db;
 
-USE test_db;
+CREATE DATABASE budgetPro_db;
+
+

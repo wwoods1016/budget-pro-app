@@ -384,3 +384,15 @@ form {
 	animation: 3.5s ease 0s normal forwards 1 fadein;
 	border-radius: 15px 75px 75px 15px;
 }
+
+#exp-section{
+	border: solid 1px gray;
+}
+#allexp{
+	border:solid 1px gray;
+}
+
+.deleteBtn{
+	size: 200px;
+	background-color: orange;
+}
