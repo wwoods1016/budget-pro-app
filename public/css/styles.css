@@ -355,9 +355,10 @@ _:-ms-input-placeholder,
 
 form {
 	display: block;
-	text-align: center;
+	text-align: left;
 	width: 100%;
 	padding: 20px;
+
 }
 
 /* About page images */
@@ -395,4 +396,9 @@ form {
 .deleteBtn{
 	size: 200px;
 	background-color: orange;
+}
+
+form {
+	display: block;
+
 }

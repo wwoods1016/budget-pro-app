@@ -65,11 +65,11 @@
 				z-index: 900;
 			}
 
-		.chart-container-pie,
-		.chart-container-bar {
-			width: 100%;
-			height: 100%;
-		}
+			.chart-container-pie,
+			.chart-container-bar {
+				width: 100%;
+				height: 100%;
+			}
 		</style>
 	</head>
 	<body>
@@ -126,19 +126,18 @@
 				class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50"
 			>
 				<header class="demo-drawer-header">
-					<img id="logo" src="./img/logo.png"/>
+					<img id="logo" src="./img/logo.png" />
 				</header>
 				<nav
 					class="demo-navigation mdl-navigation mdl-color--blue-grey-800"
 				>
-				<a class="mdl-navigation__link" href="about-us.html"
+					<a class="mdl-navigation__link" href="about-us.html"
 						><i
 							class="mdl-color-text--blue-grey-400 material-icons hover-icon"
 							role="presentation"
 							>people</i
 						>Welcome</a
-					>	
-					
+					>
 
 					<a class="mdl-navigation__link" href="income.html"
 						><i
@@ -164,7 +163,6 @@
 						>Overview</a
 					>
 
-					
 					<div class="mdl-layout-spacer"></div>
 					<a
 						class="mdl-navigation__link"
@@ -180,48 +178,49 @@
 			<main class="mdl-layout__content mdl-color--grey-100">
 				<div class="about-main mdl-grid demo-content">
 					<div class="mdl-grid demo-content">
-						<div
-							class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid"
-						>
-						<h3>INTRO</h3>
-						</div>
+						
 						<div
 							class="demo-graphs mdl-shadow--2dp mdl-color--white mdl-cell mdl-cell--8-col"
 						>
-						<h3>
-							MAIN BLOCK
-						</h3>
-						<div class="chart-container-pie">
-							<canvas id="pieChart" width="800" height="550"></canvas>
-						</div>
-						<div class="chart-container-bar">
-							<canvas id="barChart" width="800" height="550"></canvas>
-						</div>
+							
+							<div class="chart-container-pie">
+								<canvas
+									id="pieChart"
+									width="800"
+									height="550"
+								></canvas>
+							</div>
+							<div class="chart-container-bar">
+								<canvas
+									id="barChart"
+									width="800"
+									height="550"
+								></canvas>
+							</div>
 						</div>
 						<div
 							class="demo-cards mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing"
 						>
 							<div
-								class="demo-updates mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--12-col-desktop"
+								class="demo-updates third-photo-one mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--12-col-desktop"
 							>
 								<div
-									class="mdl-card__title mdl-card--expand mdl-color--teal-700"
+									class="mdl-card__title third-photo-two mdl-card--expand mdl-color--teal-700"
 								>
 									<h2 class="mdl-card__title-text">
-										Learn More
+										Buy budget.PRO Platinum
 									</h2>
 								</div>
 								<div
 									class="mdl-card__supporting-text mdl-color-text--grey-600"
 								>
-									Non dolore elit adipisicing ea reprehenderit
-									consectetur culpa.
+									More features. More customization. <br> Save time & money! Upgrade to budget.PRO Platinum for just <strong>$19.99/year</strong> and take advantage of all budget.PRO has to offer.
 								</div>
 								<div class="mdl-card__actions mdl-card--border">
 									<a
-										href="#"
+										href="https://www.debt.org/blog/10-easy-ways-cut-your-expenses/"
 										class="mdl-button mdl-js-button mdl-js-ripple-effect"
-										>BUDGET RESOURCE LINK</a
+										>UPGRADE NOW</a
 									>
 								</div>
 							</div>
@@ -230,77 +229,19 @@
 								class="demo-options mdl-card mdl-color--blue-grey-900 mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet mdl-cell--12-col-desktop"
 							>
 								<div
-										class="mdl-card__supporting-text mdl-color-text--blue-grey-50"
+									class="mdl-card__supporting-text mdl-color-text--blue-grey-50"
 								>
-									<h3>View options</h3>
-									<ul>
-										<li>
-											<label
-												for="chkbox1"
-												class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect"
-											>
-												<input
-													type="checkbox"
-													id="chkbox1"
-													class="mdl-checkbox__input"
-												/>
-												<span
-													class="mdl-checkbox__label"
-													>Click per object</span
-												>
-											</label>
-										</li>
-										<li>
-											<label
-												for="chkbox2"
-												class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect"
-											>
-												<input
-													type="checkbox"
-													id="chkbox2"
-													class="mdl-checkbox__input"
-												/>
-												<span
-													class="mdl-checkbox__label"
-													>Views per object</span
-												>
-											</label>
-										</li>
-										<li>
-											<label
-												for="chkbox3"
-												class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect"
-											>
-												<input
-													type="checkbox"
-													id="chkbox3"
-													class="mdl-checkbox__input"
-												/>
-												<span
-													class="mdl-checkbox__label"
-													>Objects selected</span
-												>
-											</label>
-										</li>
-										<li>
-											<label
-												for="chkbox4"
-												class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect"
-											>
-												<input
-													type="checkbox"
-													id="chkbox4"
-													class="mdl-checkbox__input"
-												/>
-												<span
-													class="mdl-checkbox__label"
-													>Objects viewed</span
-												>
-											</label>
-										</li>
-									</ul>
+									<h4>It looks like you're using an Ad Blocker!</h4>
+									<p>budget.PRO is an advertising supported site and we noticed you have ad-blocking enabled.</p>
+									<div class="mdl-card__actions mdl-card--border">
+
+									<a
+										href="https://www.debt.org/blog/10-easy-ways-cut-your-expenses/"
+										class="mdl-button mdl-js-button mdl-js-ripple-effect"
+										>WHITELIST US</a
+									>
+									</div>
 								</div>
-								
 							</div>
 						</div>
 					</div>
@@ -502,8 +443,8 @@
 		</svg>
 
 		<script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-	<script src="./js/dashboard.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script src="./js/dashboard.js"></script>
 	</body>
 </html>
