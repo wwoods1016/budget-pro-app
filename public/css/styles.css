@@ -402,3 +402,12 @@ form {
 	display: block;
 
 }
+
+.demo_container2 {
+	    width: 650px;
+    height: 1200px;
+    background-image: url("../img/Demo_Graph.PNG");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
