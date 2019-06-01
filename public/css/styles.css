@@ -265,6 +265,7 @@ _:-ms-input-placeholder,
 #logo {
 	position: absolute;
 	top: -10px;
+	transform: scale(0.9);
 }
 
 /* About page */
@@ -295,11 +296,15 @@ _:-ms-input-placeholder,
 #welcome-title {
 	position: absolute;
 	color: white;
-	top: 20%;
+	top: 10%;
 	max-width: 80%;
 	font-family: 'Raleway', sans-serif;
--webkit-animation: .5s ease 0s normal forwards 1 fadein;
-    animation: .5s ease 0s normal forwards 1 fadein;
+-webkit-animation: 2s ease 0s normal forwards 1 fadein;
+    animation: 2s ease 0s normal forwards 1 fadein;
+}
+
+#blueish {
+	color: #B1B1B1;
 }
 
 @keyframes fadein{
@@ -318,11 +323,11 @@ _:-ms-input-placeholder,
 	position: absolute;
 	color: white;
 	font-size: 2em;
-	bottom: 20%;
+	bottom: 10%;
 	font-family: 'Raleway', sans-serif;
 	max-width: 80%;
-	-webkit-animation: 3s ease 0s normal forwards 1 fadein;
-    animation: 3s ease 0s normal forwards 1 fadein;
+	-webkit-animation: 5s ease 0s normal forwards 1 fadein;
+    animation: 5s ease 0s normal forwards 1 fadein;
 }
 
 @keyframes fadein{
@@ -350,18 +355,50 @@ _:-ms-input-placeholder,
 
 form {
 	display: block;
-	text-align: center;
+	text-align: left;
 	width: 100%;
 	padding: 20px;
+
 }
+
+/* About page images */
+
+.about-image {
+	margin: 15px; 	
+	border-radius: 75px 15px 15px 75px;
+	border: 5px solid white;
+}
+
+#about-image-1 {
+	-webkit-animation: 3s ease 0s normal forwards 1 fadein;
+    animation: 3s ease 0s normal forwards 1 fadein;
+}
+
+#about-image-2 {
+	-webkit-animation: 3.25s ease 0s normal forwards 1 fadein;
+	animation: 3.25s ease 0s normal forwards 1 fadein;
+	border-radius: 15px;
+}
+
+#about-image-3 {
+	-webkit-animation: 3.5s ease 0s normal forwards 1 fadein;
+	animation: 3.5s ease 0s normal forwards 1 fadein;
+	border-radius: 15px 75px 75px 15px;
+}
+
 #exp-section{
 	border: solid 1px gray;
 }
 #allexp{
 	border:solid 1px gray;
 }
+
 .deleteBtn{
 	size: 200px;
 	background-color: orange;
+}
+
+form {
+	display: block;
 
 }

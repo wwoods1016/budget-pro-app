@@ -45,7 +45,10 @@
 			rel="stylesheet"
 			href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en"
 		/>
-		<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+		<link
+			href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+			rel="stylesheet"
+		/>
 		<link
 			rel="stylesheet"
 			href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -71,28 +74,26 @@
 		<div
 			class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header"
 		>
-			<header id="welcome-header"
+			<header
+				id="welcome-header"
 				class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600"
-			>
-			
-			</header>
+			></header>
 			<div
 				class="demo-drawer-title demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50"
 			>
 				<header class="demo-drawer-header">
-					<img id="logo" src="../public/img/logo.png"/>
+					<img id="logo" src="./img/logo.png" />
 				</header>
 				<nav
 					class="demo-navigation mdl-navigation mdl-color--blue-grey-800"
 				>
-				<a class="mdl-navigation__link" href="about-us.html"
+					<a class="mdl-navigation__link" href="about-us.html"
 						><i
 							class="mdl-color-text--blue-grey-400 material-icons hover-icon"
 							role="presentation"
 							>people</i
-						>Our Mission</a
-					>	
-					
+						>Welcome</a
+					>
 
 					<a class="mdl-navigation__link" href="income.html"
 						><i
@@ -118,7 +119,6 @@
 						>Overview</a
 					>
 
-					
 					<div class="mdl-layout-spacer"></div>
 					<a
 						class="mdl-navigation__link"
@@ -132,9 +132,19 @@
 				</nav>
 			</div>
 			<main class="mdl-layout__content mdl-color--grey-100">
-				<div id="welcome-main" class="about-main mdl-grid demo-content fill-background" >
-					<h1 id="welcome-title">Welcome to budget.PRO</h1>
-					<h1 id="welcome-subtitle">Our goal is to help millions of people better understand their income and expenditures.</h1>
+				<div
+					id="welcome-main"
+					class="about-main mdl-grid demo-content fill-background"
+				>
+					<h1 id="welcome-title">Welcome to <span id="blueish">budget.PRO</span></h1>
+					<h1 id="welcome-pictures">
+						<img alt="demo photo" class="about-image" id="about-image-1" src="./img/about-page-1.jpg" />
+						<img alt="demo photo" class="about-image" id="about-image-2" src="./img/about-page-2.jpg" />
+						<img alt="demo photo" class="about-image" id="about-image-3" src="./img/about-page-3.jpg" />
+					</h1>
+					<h1 id="welcome-subtitle">
+						Become a <span id="blueish">PRO</span> at managing your household budget.
+					</h1>
 				</div>
 			</main>
 		</div>

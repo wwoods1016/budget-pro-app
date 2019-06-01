@@ -5,9 +5,9 @@ const path = require('path');
 module.exports = app => {
 	// Each of the below routes just handles the HTML page that the user gets sent to.
 
-	// index route loads dashboard.html
+	// index route loads about-us.html
 	app.get('/', (req, res) => {
-		res.sendFile(path.join(__dirname, '../public/dashboard.html'));
+		res.sendFile(path.join(__dirname, '../public/about-us.html'));
 	});
 
 	// expenses route loads expenses.html
@@ -20,8 +20,8 @@ module.exports = app => {
 		res.sendFile(path.join(__dirname, '../public/income.html'));
 	});
 
-	// about route loads about-us.html
-	app.get('/about', (req, res) => {
-		res.sendFile(path.join(__dirname, '../public/about-us.html'));
+	// dashboard route loads dashboard.html
+	app.get('/dashboard', (req, res) => {
+		res.sendFile(path.join(__dirname, '../public/dashboard.html'));
 	});
 };

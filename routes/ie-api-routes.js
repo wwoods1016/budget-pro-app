@@ -5,6 +5,7 @@ const db = require('../models');
 
 // Routes
 module.exports = app => {
+
   //Get route for all expenses
   app.get("/api/incm_exp", function (req, res) {
     //console.log(res)
@@ -22,10 +23,8 @@ module.exports = app => {
         id: req.params.id
       }
     })
-      .then(function (dbincm_exp) {
-        res.json(dbincm_exp);
-      });
-  });
+
+
  //get route for perticular category
   /*app.get("/api/incm_exp/category/:category", function (req, res) {
     //console.log(res)
@@ -75,7 +74,7 @@ module.exports = app => {
     db.incm_exp.update(req.body,
       {
         where: {
-          ieID: req.body.ieID
+          ID: req.body.id
         }
       })
       .then(function (dbincm_exp) {
@@ -100,14 +99,13 @@ module.exports = app => {
   //Post route for income and expenses comment
   app.post("/api/incm_exp", function (req, res) {
     db.incm_exp.create({
+      IEType: req.body.IEType,
       amount: req.body.Amount,
       IEdate: req.body.Date,
       category: req.body.Category,
       descript: req.body.Description,
       source: req.body.Source,
       IEType: req.body.IEType
-
-
 
     })
       .then(function (dbincm_exp) {
